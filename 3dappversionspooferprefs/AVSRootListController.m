@@ -1,5 +1,6 @@
 #include "AVSRootListController.h"
 #import <spawn.h>
+#include <roothide.h>
 
 @implementation AVSRootListController
 
@@ -106,7 +107,7 @@
 - (void)respring {
 	pid_t pid;
 	const char* args[] = {"killall", "backboardd", NULL};
-	posix_spawn(&pid, "/var/jb/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+	posix_spawn(&pid, jbroot("/usr/bin/killall"), NULL, NULL, (char* const*)args, NULL);
 }
 
 -(void)openTwitter {
