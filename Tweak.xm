@@ -13,8 +13,8 @@ static void loadPrefs() {
 
 %hook SBIconView
 - (void)setApplicationShortcutItems:(NSArray *)shortcutItems {
-	#define TDAVS_ASSET_DARK jbroot(ROOT_PATH_NS(@"/Library/Application Support/3DAppVersionSpoofer.bundle/fakeverblack@2x.png"))
-	#define TDAVS_ASSET_WHITE jbroot(ROOT_PATH_NS(@"/Library/Application Support/3DAppVersionSpoofer.bundle/fakeverwhite@2x.png"))
+	#define TDAVS_ASSET_DARK jbroot(@"/Library/Application Support/3DAppVersionSpoofer.bundle/fakeverblack@2x.png")
+	#define TDAVS_ASSET_WHITE jbroot(@"/Library/Application Support/3DAppVersionSpoofer.bundle/fakeverwhite@2x.png")
 	if (!is3DMenu) {
 		return %orig;
 	}

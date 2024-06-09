@@ -3,7 +3,7 @@
 #import <rootless.h>
 #include <roothide.h>
 
-#define SPOOF_VER_PLIST jbroot(ROOT_PATH_NS(@"/var/mobile/Library/Preferences/com.0xkuj.3dappversionspoofer.plist"))
+#define SPOOF_VER_PLIST jbroot(@"/var/mobile/Library/Preferences/com.0xkuj.3dappversionspoofer.plist")
 #define SPOOF_VER_ASSET_WITH_NAME(_imageName) [NSString stringWithFormat:jbroot(@"/Library/PreferenceBundles/InstantAlbumPref.bundle/%@.png"),_imageName]
 #define SPOOF_VER_TWEAK_BUNDLE @"com.0xkuj.3DAppVersionSpoofer"
 
